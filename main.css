@@ -1,0 +1,495 @@
+ /*First We are going to use a CSS reset. What this does is normalise everything so that font sizes and everything are the same on all browsers. I am using the Meyer reset.. You can just google for it and use it too..*/
+
+
+/* https://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*When you learn about floats, you will come across the floating issue where you have to clear floats.. im not gonna bother trying to explain this but im floating some elements and i need to add the clearflix class to make it all ok*/
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+
+/*Now for the real shit*/
+
+#keyboard {
+  width: 820px;
+  height: 240px;
+  background: #dedede;
+  border-radius: 2px;
+  margin: 10px auto;
+  padding: 10px;
+  box-shadow: 5px 2px 10px #999;
+}
+
+.keygroup {
+  float: left;
+  margin-right: 25px;
+}
+
+.mainkeys {
+  width: 522px;
+}
+
+.subkeys {
+  width: 105px;
+}
+
+.numkeys {
+  width: 140px;
+  margin-right: 0px;
+}
+
+.row {
+  margin-bottom: 8px;
+  height: auto;
+}
+
+span {
+  background: #FFF;
+  box-shadow: 3px 3px 3px #999;
+  border-radius: 3px;
+  margin-right: 5px;
+  color: #404040;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  display: block;
+  float: left;
+}
+
+.row-1 span {
+  height: 20px;
+  width: 30px;
+  line-height: 20px;
+  text-tranform: lowercase;
+}
+
+.mainkeys span {
+  text-transform: uppercase;
+}
+
+.mainkeys .row-1 span {
+  width: 32px;
+  text-transform: lowercase;
+}
+
+.mainkeys .row-1 span.fn {
+  text-transform: uppercase;
+}
+
+.mainkeys .row-6 span {
+  height: 40px;
+  line-height: 40px;
+}
+
+.keygroup .special {
+  text-align: left;
+  position: relative;
+  padding-left: 2px;
+  box-sizing: border-box;
+  line-height: 40px;
+  text-transform: lowercase;
+}
+
+.mainkeys .row-6 .special {
+  line-height: 53px;
+}
+
+.special.right {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 2px;
+}
+
+.special-a {
+  width: 35px;
+  position: relative;
+}
+
+.special-a em {
+  font-size: 9px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  line-height: 10px;
+}
+
+.special-b {
+  width: 60px;
+}
+
+.special-c {
+  width: 63px;
+}
+
+.special-d {
+  width: 80px;
+}
+
+.special-e {
+  width: 175px;
+  text-indent: -9999px;
+}
+
+.double {
+  line-height: 15px;
+}
+
+.double em {
+  display: block;
+}
+
+.subkeys span {
+  font-size: 9px;
+}
+
+.subkeys .double {
+  box-sizing: border-box;
+  padding-top: 5px;
+}
+
+.subkeys .double em {
+  line-height: 10px;
+}
+
+.subkeys .row-4,
+.subkeys .row-5 {
+  height: 30px;
+  display: block;
+  width: 100%;
+}
+
+.subkeys .row-5 span {
+  float: none;
+  margin: 22px 35px 0;
+}
+
+.numkeys .row-6 span {
+  height: 40px;
+  line-height: 40px;
+}
+
+.numkeys .row-5 {
+  position: relative;
+}
+
+.numkeys .long {
+  position: absolute;
+  right: -35px;
+  top: 0px;
+  height: 81px;
+  line-height: 138px;
+}
+
+.keygroup .fn {
+  font-size: 6px;
+  box-sizing: border-box;
+  padding-top: 5px;
+  text-align: right;
+  padding-right: 5px;
+  text-transform: uppercase;
+}
+
+.symbol {
+  background: url(img/keyboard-sprite.png) no-repeat 0 0 #fff;
+  background-size: 80%;
+}
+
+.sm-sun {
+  background-position: 7px 2px;
+}
+
+.sun {
+  background-position: 5px -16px;
+}
+
+.expose {
+  background-position: 6px -33px;
+  background-size: 60%;
+}
+
+.timer {
+  background-position: 6px -61px;
+  background-size: 70%;
+}
+
+.previous {
+  background-position: 8px -141px;
+}
+
+.play {
+  background-position: 8px -166px;
+}
+
+.next {
+  background-position: 8px -192px;
+}
+
+.mute {
+  background-position: 8px -221px;
+}
+
+.voldown {
+  background-position: 8px -243px;
+}
+
+.volup {
+  background-position: 8px -270px;
+}
+
+.eject {
+  text-indent: -9999px;
+  background-position: 8px -296px;
+}
+
+.command {
+  background-position: 45px -350px;
+  background-size: 47%;
+}
+
+.command.right {
+  background-position: -1px -350px;
+}
+
+.arr-up {
+  text-indent: -9999px;
+  background-position: 11px -360px;
+}
+
+.arr-left {
+  text-indent: -9999px;
+  background-position: 9px -390px;
+}
+
+.arr-down {
+  text-indent: -9999px;
+  background-position: 9px -416px;
+}
+
+.arr-right {
+  text-indent: -9999px;
+  background-position: 9px -448px;
+}
+
+.capslock {
+  position: relative;
+}
+
+.capslock:before {
+  position: absolute;
+  content: '.';
+  left: 2px;
+  top: -19px;
+  font-size: 25px;
+}
+
+.capslock.on:before {
+  color: #FC0;
+  text-shadow: 1px 1px 1px #dedede;
+}
+
+
+/*firefox*/
+
+@-moz-document url-prefix() {
+  .volup {
+    background-position: 8px -276px;
+  }
+  .voldown {
+    background-position: 8px -250px;
+  }
+  .mute {
+    background-position: 8px -228px;
+  }
+  .next {
+    background-position: 8px -197px;
+  }
+  .play {
+    background-position: 8px -170px;
+  }
+  .previous {
+    background-position: 8px -145px;
+  }
+}
+
+
+/*IE*/
+
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+  .volup {
+    background-position: 8px -276px;
+  }
+  .voldown {
+    background-position: 8px -250px;
+  }
+  .mute {
+    background-position: 8px -228px;
+  }
+  .next {
+    background-position: 8px -197px;
+  }
+  .play {
+    background-position: 8px -170px;
+  }
+  .previous {
+    background-position: 8px -145px;
+  }
+}
